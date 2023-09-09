@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UserControler;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,6 +24,9 @@ Route::get('checkout', function () {
 Route::get('success-checkout', function () {
     return view('success_checkout');
 })->name('success_checkout');
+
+Route::get('sign-in-google', [UserControler::class, 'google'])->name('sign-in-google');
+Route::get('auth/google/callback', [UserControler::class, 'handleProviderCallback'])->name('user.google.callback');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
