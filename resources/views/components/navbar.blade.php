@@ -25,12 +25,12 @@
 
       @auth
       <div class="d-flex user-logged nav-item dropdown np-arrow">
-        <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+        <a href="#"  role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
           Hi, {{ Auth::user()->name }}
-          <img src="{{ Auth::user()->avatar }}" class="user-photo" alt="">
+          <img class="user-photo" src="{{ Auth::user()->avatar }}" c alt="">
           <ul class="dropdown-menu" aria-labelladby="dropdownMenuLink" style="right:0; left:auto">
             <li>
-              <a href="#" class="dropdown-item">My Dashboard</a>
+              <a href="{{ route('dashboard') }}" class="dropdown-item">My Dashboard</a>
             </li>
             <li>
               <a href="#" class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit()">Sign Out</a>
