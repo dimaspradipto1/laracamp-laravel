@@ -29,6 +29,10 @@ Route::get('/', function () {
 Route::get('sign-in-google', [UserControler::class, 'google'])->name('sign-in-google');
 Route::get('auth/google/callback', [UserControler::class, 'handleProviderCallback'])->name('user.google.callback');
 
+//midtrans routes
+Route::get('payment/success' , [UserControler::class, 'midtransCallback']);
+Route::post('payment/success' , [UserControler::class, 'midtransCallback']);
+
 Route::middleware(['auth'])->group(function () {
     //checkout routes
     Route::get('checkout/success', [CheckoutController::class, 'success'])->name('checkout.success')->middleware('ensureUserRole:user');
