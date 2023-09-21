@@ -45,21 +45,14 @@
                 <input name="occupation" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
               </div>
               <div class="mb-4">
-                <label for="exampleInputEmail1" class="form-label">Card Number</label>
-                <input name="card_number" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label for="exampleInputEmail1" class="form-label">Phone</label>
+                <input name="phone" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
               </div>
-              <div class="mb-5">
-                <div class="row">
-                  <div class="col-lg-6 col-12">
-                    <label for="exampleInputEmail1" class="form-label">Expired</label>
-                    <input name="expired" type="month" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  </div>
-                  <div class="col-lg-6 col-12">
-                    <label for="exampleInputEmail1" class="form-label">CVC</label>
-                    <input name="cvc" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" maxlength="3">
-                  </div>
-                </div>
+              <div class="mb-4">
+                <label for="exampleInputEmail1" class="form-label">Address</label>
+                <input name="address" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
               </div>
+              
               <button type="submit" class="w-100 btn btn-primary">Pay Now</button>
               <p class="text-center subheader mt-4">
                 <img src="{{ asset('/assets/images/ic_secure.svg') }}" alt=""> Your payment is secure and encrypted.
